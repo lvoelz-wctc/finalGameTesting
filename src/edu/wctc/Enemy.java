@@ -1,9 +1,7 @@
 package edu.wctc;
 
-public interface Enemy {
+public interface Enemy extends Being {
 
-   String showAttack();
    String showYell();
-   String getName();
 
 }

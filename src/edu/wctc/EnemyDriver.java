@@ -12,7 +12,7 @@ public class EnemyDriver {
         int result = r.nextInt(upperBound-lowerBound) + lowerBound;
 
         EnemyFactory ef = new EnemyFactory();
-        return ef.create(result);
+        return ef.create();
     }
 
     public String showEnemy(Enemy e){
@@ -22,4 +22,6 @@ public class EnemyDriver {
     public String showAttack(Enemy e){
         return "The " + e.getName() + " " + e.showAttack() + "!";
     }
+
+    public String showDamage(Enemy e) {return "The " + e.getName() + " hits you for " + e.calculateDamage() + " damage!";}
 }

@@ -1,6 +1,6 @@
 package edu.wctc;
 
-public interface Beast extends Enemy {
+public abstract class Beast implements Enemy {
 
     //make this an abstract class and define "The beast roars!" yell method here.
 
