@@ -3,9 +3,13 @@ import java.util.Random;
 
 public class EnemyDriver {
 
-    public EnemyDriver(){}
+    private Being b;
 
-    public Enemy createEnemy() {
+    public EnemyDriver(Being b){
+        this.b = b;
+    }
+
+    /**public Enemy createEnemy() {
         Random r = new Random();
         int lowerBound = 1;
         int upperBound = 4;
@@ -13,15 +17,17 @@ public class EnemyDriver {
 
         EnemyFactory ef = new EnemyFactory();
         return ef.create();
+    }**/
+
+    public String showEnemy(){
+        return "You see a " + b.getName() + "!";
     }
 
-    public String showEnemy(Enemy e){
-        return "You see a " + e.getName() + "!";
+    public String showAttack(){
+        return "The " + b.getName() + " " + b.showAttack() + "!";
     }
 
-    public String showAttack(Enemy e){
-        return "The " + e.getName() + " " + e.showAttack() + "!";
-    }
+    public String showDamage() {return "The " + b.getName() + " hits you for ";}
 
-    public String showDamage(Enemy e) {return "The " + e.getName() + " hits you for " + e.calculateDamage() + " damage!";}
+    public Integer returnDamage() {return b.calculateDamage();}
 }
