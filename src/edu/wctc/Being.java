@@ -7,6 +7,6 @@ public interface Being {
     int calculateDamage();
     String showAttack();
     String getName();
-
+    int getHealth();
 
 }

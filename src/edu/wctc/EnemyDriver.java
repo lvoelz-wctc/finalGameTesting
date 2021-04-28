@@ -3,10 +3,11 @@ import java.util.Random;
 
 public class EnemyDriver {
 
-    private Being b;
+    private Enemy e;
 
-    public EnemyDriver(Being b){
-        this.b = b;
+    /**This should accept an enemy and not a being because we'll never be sending a player**/
+    public EnemyDriver(Enemy e){
+        this.e = e;
     }
 
     /**public Enemy createEnemy() {
@@ -19,15 +20,18 @@ public class EnemyDriver {
         return ef.create();
     }**/
 
+    //Should these be broken out into different EnemyDriver subclasses?
     public String showEnemy(){
-        return "You see a " + b.getName() + "!";
+        return "You see a " + e.getName() + "!";
     }
 
     public String showAttack(){
-        return "The " + b.getName() + " " + b.showAttack() + "!";
+        return "The " + e.getName() + " " + e.showAttack() + "!";
     }
 
-    public String showDamage() {return "The " + b.getName() + " hits you for ";}
+    public String showDamage() {return "The " + e.getName() + " hits you for ";}
 
-    public Integer returnDamage() {return b.calculateDamage();}
+    public Integer returnDamage() {return e.calculateDamage();}
+
+
 }

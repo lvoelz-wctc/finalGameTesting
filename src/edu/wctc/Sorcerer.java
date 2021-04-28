@@ -33,12 +33,12 @@ public class Sorcerer extends Humanoid {
     }
 
     @Override
-    public String showYell() {
-        return null;
+    public String getName() {
+        return name;
     }
 
     @Override
-    public String getName() {
-        return name;
+    public int getHealth() {
+        return health;
     }
 }

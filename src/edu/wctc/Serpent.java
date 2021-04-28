@@ -33,12 +33,12 @@ public class Serpent extends Beast {
     }
 
     @Override
-    public String showYell() {
-        return null;
+    public String getName() {
+        return name;
     }
 
     @Override
-    public String getName() {
-        return name;
+    public int getHealth() {
+        return health;
     }
 }

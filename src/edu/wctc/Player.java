@@ -1,5 +1,7 @@
 package edu.wctc;
 
+import java.util.Random;
+
 public class Player implements Being{
 
     public String name;
@@ -21,6 +23,14 @@ public class Player implements Being{
         this.name = name;
     }
 
+    public int drinkPotion(){
+        Random r = new Random();
+        int lowerBound = 5;
+        int upperBound = 15;
+        int potion = r.nextInt(upperBound-lowerBound) + lowerBound;
+        return potion;
+    }
+
     @Override
     public int calculateHealth(int damage) {
         return (health - damage);
@@ -32,8 +42,12 @@ public class Player implements Being{
     }
 
     @Override
-    public int calculateDamage() {
-        return 0;
+    public int calculateDamage(){
+        Random r = new Random();
+        int lowerBound = 5;
+        int upperBound = 15;
+        int result = r.nextInt(upperBound-lowerBound) + lowerBound;
+        return result;
     }
 
     @Override
